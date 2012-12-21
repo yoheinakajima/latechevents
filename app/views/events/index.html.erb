@@ -1,14 +1,4 @@
-<h1>Listing events</h1>
-
 <table>
-  <tr>
-    <th>Name</th>
-    <th>Website</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
@@ -22,4 +12,4 @@
 
 <br />
 
-<%= link_to 'New Event', new_event_path %>
+
