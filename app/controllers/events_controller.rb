@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all(:conditions => ["endtime > ?", Time.now])
 
     respond_to do |format|
       format.html # index.html.erb
