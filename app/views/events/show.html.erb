@@ -7,9 +7,16 @@
 </h1>
 
 <p>
-  <%= link_to @event.website, @event.website %>
+	<%= @event.starttime.to_date().strftime("%A %B %d, %Y") %>
+	<% if @event.starttime.to_date() != @event.endtime.to_date() %>
+		<%=	"to " + @event.endtime.to_date().strftime("%B %d, %Y") %>
+	<% end %>
 </p>
 
-
+<p>
+  <%= link_to @event.website, @event.website %>
+</p>
+<p>
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
+</p>

@@ -1,12 +1,18 @@
 <% @title="LA Tech Events" %>
-<table>
 <% @events.each do |event| %>
-<h3><%= link_to event.name, event %></h3>
-starttime: <%= event.starttime %>
-endtime: <%= event.endtime %>
-<hr>
+<div class="container-fluid">
+<div class="row-fluid">
+	<div class="span12">
+		<h3><%= link_to event.name, event %></h3>
+		<%= event.starttime.to_date().strftime("%A %B %d, %Y") %>
+		<% if event.starttime.to_date() != event.endtime.to_date() %>
+			<%=	"to " + event.endtime.to_date().strftime("%B %d, %Y") %>
+		<% end %>
+		<hr>
+	</div>
+</div>
+</div>
 <% end %>
-</table>
 
 <br />
 
