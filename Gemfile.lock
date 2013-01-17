@@ -37,7 +37,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
-    datetimepicker (0.0.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -109,7 +108,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  datetimepicker
   jquery-rails
   pg
   rails (= 3.2.8)
